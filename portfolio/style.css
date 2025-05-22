@@ -1,0 +1,146 @@
+/* styles.css */
+
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #f3f3f3;
+  background: linear-gradient(135deg, #2a003f, #3c0a6c);
+  overflow-x: hidden;
+}
+
+canvas#bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+header {
+  text-align: center;
+  padding: 5rem 1rem 1rem;
+}
+
+h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+p {
+  font-size: 1.2rem;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 1rem;
+  list-style: none;
+  background-color: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #f3f3f3;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #ff77ff;
+}
+
+section {
+  padding: 4rem 2rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+h2 {
+  font-size: 2rem;
+  border-bottom: 2px solid #fff;
+  padding-bottom: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.button {
+  background: #6100a5;
+  padding: 0.75rem 1.5rem;
+  color: #fff;
+  border: none;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  transition: background 0.3s;
+}
+
+.button:hover {
+  background: #9400d3;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 1rem;
+  text-align: center;
+}
+
+.skill {
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 0.5rem;
+  backdrop-filter: blur(5px);
+  transition: transform 0.3s;
+}
+
+.skill:hover {
+  transform: scale(1.05);
+}
+
+.card {
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-left: 5px solid #ff77ff;
+  margin-bottom: 2rem;
+}
+
+.portfolio-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.portfolio-item {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 2rem;
+  text-align: center;
+  border-radius: 0.5rem;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.9rem;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* Animations */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+
+.fade-in.delay {
+  animation-delay: 1s;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
